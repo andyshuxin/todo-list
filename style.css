@@ -2,6 +2,7 @@ body {
     text-align: center;
     font-size: 16px;
     width: 640px;
+    font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
 }
 
 ul {
@@ -21,4 +22,24 @@ header {
 
 input, button {
     font-size: 2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: maroon;
+}
+
+p#github-link {
+    font-size: 2em;
+}
+
+p#github-link a {
+    background-color:pink;
 }
