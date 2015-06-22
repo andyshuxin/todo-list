@@ -1,32 +1,27 @@
-<html lang='en'>
-    <head>
-        <title>todo list</title>
-        <style>
-            #header {
-                background-color: blue;
-                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-                font-size: 50;
-                color: white;
-                
-                padding: 20px;
-                max-width: 450px;
-            }
-            
-            #task-input {
-                font-size: 3em;
-                max-width: 450px;
-            }
-        </style>
-    </head>
-    <body>
-        <header id='header'>
-            todo
+<HTML lang="en">
+	<head>
+		<title>HTML test</title>
+        <meta charset="utf-8" />
+		<link type="text/css" rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+        <header>
+            To-Do <span>List</span>
         </header>
-        
-        <div>
+
+        <div class="main_box">
+            <ul id="task-list"></ul>
         </div>
+
         <footer>
-            <input id='task-input' placeholder='Add New Task' />
+            <input type="text" id="task-input" />
+            <button id="add_task_btn">add task</button>
+            <br />
+            <p>Presented to you by <a href="http://shux.in">Andy Shu Xin</a></p>
+            <p>Source code: <a href="https://github.com/andyshuxin/todo-list">click me</a></p>
         </footer>
-    </body>
-</html> 
+
+        <script src="main.js"></script>
+	</body>
+</html>

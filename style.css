@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+    font-size: 16px;
+    width: 640px;
+}
+
+ul {
+    width: 480px;
+    text-align: left;
+    padding-left: 100px;
+}
+
+li {
+    font: bold 2em/1.5 serif;;
+}
+
+header {
+    font: 5em/1.5 Verdana, Helvetica, sans-serif;
+    background-color: azure;
+}
+
+input, button {
+    font-size: 2em;
+}
