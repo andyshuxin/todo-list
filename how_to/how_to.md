@@ -38,10 +38,19 @@ Step 3: Build index.html
 
 Let's begin with the HTML. We'll have three parts:
 1. A header, which shows the title;
-2. A main section, which shows the task-list;
+2. A main section, which contains the task-list;
 3. A footer, which contains a input-field and a button.
 
 ```
+<!DOCTYLE html>
 <html lang="en">
+	<head>
+		<meta charset='utf-8' />
+		<title>Todo-List</title>
+		<link type='text/css' rel='stylesheet' href='style.css' />
+	</head>
+	<body>
+		<header></header>
+	</body>
 </html>
 ```
