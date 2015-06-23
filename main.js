@@ -1,4 +1,5 @@
 /*jshint browser:true */
+'use strict';
 
 var DEBUG = false;
 
@@ -20,7 +21,6 @@ if (DEBUG) {
 }
 
 btn.onclick = function () {
-    'use strict';
     var li = document.createElement("li");
     textNode = document.createTextNode(input.value);
     li.appendChild(textNode);
@@ -30,7 +30,6 @@ btn.onclick = function () {
 };
 
 task_list.addEventListener('click', function(e) {
-    'use strict';
     var li = e.target;
     if (li.tagName.toUpperCase() === 'LI'){
         if (confirm('Seriously?')) {
