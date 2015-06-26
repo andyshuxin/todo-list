@@ -21,14 +21,23 @@ if (DEBUG) {
     }
 }
 
-btn.onclick = function () {
+var addTaskItem = function (itemText) {
     'use strict';
+    if (!itemText) {
+        return true;
+    }
     var li = document.createElement("li"),
-        textNode = document.createTextNode(input.value);
+        textNode = document.createTextNode(itemText);
     li.appendChild(textNode);
     li.setAttribute('id', id_counter.toString());
     id_counter += 1;
     task_list.appendChild(li);
+    input.value = '';
+};
+
+btn.onclick = function () {
+    'use strict';
+    addTaskItem(input.value);
 };
 
 task_list.addEventListener('click', function (e) {
@@ -38,5 +47,13 @@ task_list.addEventListener('click', function (e) {
         if (confirm('Seriously?')) {
             task_list.removeChild(li);
         }
+    }
+});
+
+/* Add an item when the user input "Enter" into the input value */
+input.addEventListener('keypress', function (event) {
+    'use strict';
+    if (event.keyCode === 13) {
+        addTaskItem(input.value);
     }
 });
