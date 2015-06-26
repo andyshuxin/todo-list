@@ -9,10 +9,8 @@ var task_list = document.getElementById('task_list');
 
 var id_counter = 0;
 
-var textNode;
-
 if (DEBUG) {
-    var i, li;
+    var i, li, textNode;
     for (i = 0; i < 10; i += 1) {
         li = document.createElement("li");
         textNode = document.createTextNode(i.toString());
@@ -25,8 +23,8 @@ if (DEBUG) {
 
 btn.onclick = function () {
     'use strict';
-    var li = document.createElement("li");
-    textNode = document.createTextNode(input.value);
+    var li = document.createElement("li"),
+        textNode = document.createTextNode(input.value);
     li.appendChild(textNode);
     li.setAttribute('id', id_counter.toString());
     id_counter += 1;
