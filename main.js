@@ -45,7 +45,7 @@ task_list.addEventListener('click', function (event) {
     'use strict';
     var li = event.target;
     if (li.tagName.toUpperCase() === 'LI') {
-        if ( li.style.textDecoration !== 'line-through') {
+        if (li.style.textDecoration !== 'line-through') {
             li.style.textDecoration = 'line-through';
             li.style.color = 'grey';
         } else {
