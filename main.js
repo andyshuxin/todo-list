@@ -16,6 +16,7 @@ if (DEBUG) {
         textNode = document.createTextNode(i.toString());
         li.appendChild(textNode);
         li.setAttribute('id', id_counter.toString());
+        li.setAttribute('class', 'no_done');
         id_counter += 1;
         task_list.appendChild(li);
     }
@@ -26,7 +27,7 @@ var addTaskItem = function (itemText) {
     if (!itemText) {
         return true;
     }
-    var li = document.createElement("li"),
+    var li = document.createElement('li'),
         textNode = document.createTextNode(itemText);
     li.appendChild(textNode);
     li.setAttribute('id', id_counter.toString());
@@ -40,12 +41,16 @@ btn.onclick = function () {
     addTaskItem(input.value);
 };
 
-task_list.addEventListener('click', function (e) {
+task_list.addEventListener('click', function (event) {
     'use strict';
-    var li = e.target;
+    var li = event.target;
     if (li.tagName.toUpperCase() === 'LI') {
-        if (confirm('Seriously?')) {
-            task_list.removeChild(li);
+        if ( li.style.textDecoration !== 'line-through') {
+            li.style.textDecoration = 'line-through';
+            li.style.color = 'grey';
+        } else {
+            li.style.textDecoration = '';
+            li.style.color = 'black';
         }
     }
 });
